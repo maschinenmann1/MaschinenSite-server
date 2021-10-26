@@ -4,30 +4,65 @@ var router = express.Router();
 
 let animes = [
   {id: 1, name:"Mushoku Tensei", imgName: 'miniaturas/mushoku.jpg', episodios: [
-    {number: 1, name: "Episodio 1", url: ["www.as.com",] },
-    {number: 2, name: "Episodio 2", url: ["www.as.com",] },
+    {number: 1, name: "Episodio 1", url: ["https://streamtape.com/v/MA3d9vaL79h64V/Mushoku_Tensei_-_01.mp4", "https://embedsb.com/riyzuo0ulh6t.html", "https://mega.nz/file/cdoASLwD#x7DAkJr5PiM2S528uKAmKnUXQ-cRF-gI7O_80K5TBlk"] },
+    {number: 2, name: "Episodio 2", url: ["https://streamtape.com/v/VYjyqZYRVXIP9P/Mushoku_Tensei_-_02.mp4", "https://embedsb.com/zmdpkj4kw3wb.html", "https://mega.nz/file/NU4W3BRY#TzhvKLPfAB_LGqvofTat4kuKbuCX031jsDr8PujNOho"] },
   ]},
   {id: 2, name: "One Piece", imgName: 'miniaturas/One_Piece.jpg', episodios: [
-    { number: 1, name: "Episodio 1", url: ["www.as.com",]},
-    {number: 2, name: "Episodio 2", url: ["www.as.com",]},
+    { number: 1, name: "Episodio 1", url: ["https://streamtape.com/v/mqMKqGpPk3tb3wJ/One_Piece_-_001.mp4", "https://embedsb.com/vr8wi0unmypg.html", "https://mega.nz/file/hZpkxRpS#gx6p57LWB6zrGn-EWFudKqlmGFVRQP2f9PLzYXk_TKM"]},
+    {number: 2, name: "Episodio 2", url: ["https://streamtape.com/v/1DkAjrgWpRtewJ2/One_Piece_-_002.mp4", "https://embedsb.com/3ybvbrg29kwk.html", "https://mega.nz/file/hF5GTDjI#yDtbgsQcajpbUQ0SVxdIBBYvx_sshxnoS8WdPIly8xE"]},
   ]},
   {id: 3, name: "Magi The Labyrinth of Magic", imgName: 'miniaturas/magi.jpg', episodios: [
-    {number: 1, name: "Episodio 1", url: ["https://embedsb.com/e/zem989w6glqw.html", "https://mega.nz/embed/YJwGDbJD#E9cVCSbgUcmNRvAO4xKMwZqw_bv_aOJ5Q5Pb27QoAf4"]},
-    {number: 2, name: "Episodio 2", url: ["www.as.com",]},
+    {number: 1, name: "Episodio 1", url: ["https://streamtape.com/v/DMQGezDpKmCD4V/Magi_-_The_Labyrinth_of_Magic_-_01.mp4", "https://embedsb.com/am9ugkzc2e78.html", "https://mega.nz/file/kJRQRLiZ#s68VEo7v5uKGrtBOSw6AOG10-t7k_QvqOLjSxqmIQvU"]},
+    {number: 2, name: "Episodio 2", url: ["https://streamtape.com/v/ellJbwxa7lhY0y1/Magi_-_The_Labyrinth_of_Magic_-_02.mp4", "https://embedsb.com/o4nrpeywlz87.html", "https://mega.nz/file/xNQGVDIL#V3yvDLsBQacuwqLxVI8gnLCbSbBrocAXW8mqfHLhtx0"]},
   ]},
-  {id: 4, name: "Mushoku Tensei", imgName: 'miniaturas/mushoku.jpg', episodios: [
-    {number: 1, name: "Episodio 1", url: ["www.as.com",] },
-    {number: 2, name: "Episodio 2", url: ["www.as.com",] },
+  {id: 4, name:"Mushoku Tensei", imgName: 'miniaturas/mushoku.jpg', episodios: [
+    {number: 1, name: "Episodio 1", url: ["https://streamtape.com/v/MA3d9vaL79h64V/Mushoku_Tensei_-_01.mp4", "https://embedsb.com/riyzuo0ulh6t.html", "https://mega.nz/file/cdoASLwD#x7DAkJr5PiM2S528uKAmKnUXQ-cRF-gI7O_80K5TBlk"] },
+    {number: 2, name: "Episodio 2", url: ["https://streamtape.com/v/VYjyqZYRVXIP9P/Mushoku_Tensei_-_02.mp4", "https://embedsb.com/zmdpkj4kw3wb.html", "https://mega.nz/file/NU4W3BRY#TzhvKLPfAB_LGqvofTat4kuKbuCX031jsDr8PujNOho"] },
   ]},
   {id: 5, name: "One Piece", imgName: 'miniaturas/One_Piece.jpg', episodios: [
-    { number: 1, name: "Episodio 1", url: ["www.as.com",]},
-    {number: 2, name: "Episodio 2", url: ["www.as.com",]},
+    { number: 1, name: "Episodio 1", url: ["https://streamtape.com/v/mqMKqGpPk3tb3wJ/One_Piece_-_001.mp4", "https://embedsb.com/vr8wi0unmypg.html", "https://mega.nz/file/hZpkxRpS#gx6p57LWB6zrGn-EWFudKqlmGFVRQP2f9PLzYXk_TKM"]},
+    {number: 2, name: "Episodio 2", url: ["https://streamtape.com/v/1DkAjrgWpRtewJ2/One_Piece_-_002.mp4", "https://embedsb.com/3ybvbrg29kwk.html", "https://mega.nz/file/hF5GTDjI#yDtbgsQcajpbUQ0SVxdIBBYvx_sshxnoS8WdPIly8xE"]},
   ]},
   {id: 6, name: "Magi The Labyrinth of Magic", imgName: 'miniaturas/magi.jpg', episodios: [
-    {number: 1, name: "Episodio 1", url: ["https://embedsb.com/e/zem989w6glqw.html", "https://mega.nz/embed/YJwGDbJD#E9cVCSbgUcmNRvAO4xKMwZqw_bv_aOJ5Q5Pb27QoAf4"]},
-    {number: 2, name: "Episodio 2", url: ["www.as.com",]},
+    {number: 1, name: "Episodio 1", url: ["https://streamtape.com/v/DMQGezDpKmCD4V/Magi_-_The_Labyrinth_of_Magic_-_01.mp4", "https://embedsb.com/am9ugkzc2e78.html", "https://mega.nz/file/kJRQRLiZ#s68VEo7v5uKGrtBOSw6AOG10-t7k_QvqOLjSxqmIQvU"]},
+    {number: 2, name: "Episodio 2", url: ["https://streamtape.com/v/ellJbwxa7lhY0y1/Magi_-_The_Labyrinth_of_Magic_-_02.mp4", "https://embedsb.com/o4nrpeywlz87.html", "https://mega.nz/file/xNQGVDIL#V3yvDLsBQacuwqLxVI8gnLCbSbBrocAXW8mqfHLhtx0"]},
   ]},
-
+  {id: 7, name:"Mushoku Tensei", imgName: 'miniaturas/mushoku.jpg', episodios: [
+    {number: 1, name: "Episodio 1", url: ["https://streamtape.com/v/MA3d9vaL79h64V/Mushoku_Tensei_-_01.mp4", "https://embedsb.com/riyzuo0ulh6t.html", "https://mega.nz/file/cdoASLwD#x7DAkJr5PiM2S528uKAmKnUXQ-cRF-gI7O_80K5TBlk"] },
+    {number: 2, name: "Episodio 2", url: ["https://streamtape.com/v/VYjyqZYRVXIP9P/Mushoku_Tensei_-_02.mp4", "https://embedsb.com/zmdpkj4kw3wb.html", "https://mega.nz/file/NU4W3BRY#TzhvKLPfAB_LGqvofTat4kuKbuCX031jsDr8PujNOho"] },
+  ]},
+  {id: 8, name: "One Piece", imgName: 'miniaturas/One_Piece.jpg', episodios: [
+    { number: 1, name: "Episodio 1", url: ["https://streamtape.com/v/mqMKqGpPk3tb3wJ/One_Piece_-_001.mp4", "https://embedsb.com/vr8wi0unmypg.html", "https://mega.nz/file/hZpkxRpS#gx6p57LWB6zrGn-EWFudKqlmGFVRQP2f9PLzYXk_TKM"]},
+    {number: 2, name: "Episodio 2", url: ["https://streamtape.com/v/1DkAjrgWpRtewJ2/One_Piece_-_002.mp4", "https://embedsb.com/3ybvbrg29kwk.html", "https://mega.nz/file/hF5GTDjI#yDtbgsQcajpbUQ0SVxdIBBYvx_sshxnoS8WdPIly8xE"]},
+  ]},
+  {id: 9, name: "Magi The Labyrinth of Magic", imgName: 'miniaturas/magi.jpg', episodios: [
+    {number: 1, name: "Episodio 1", url: ["https://streamtape.com/v/DMQGezDpKmCD4V/Magi_-_The_Labyrinth_of_Magic_-_01.mp4", "https://embedsb.com/am9ugkzc2e78.html", "https://mega.nz/file/kJRQRLiZ#s68VEo7v5uKGrtBOSw6AOG10-t7k_QvqOLjSxqmIQvU"]},
+    {number: 2, name: "Episodio 2", url: ["https://streamtape.com/v/ellJbwxa7lhY0y1/Magi_-_The_Labyrinth_of_Magic_-_02.mp4", "https://embedsb.com/o4nrpeywlz87.html", "https://mega.nz/file/xNQGVDIL#V3yvDLsBQacuwqLxVI8gnLCbSbBrocAXW8mqfHLhtx0"]},
+  ]},
+  {id: 10, name:"Mushoku Tensei", imgName: 'miniaturas/mushoku.jpg', episodios: [
+    {number: 1, name: "Episodio 1", url: ["https://streamtape.com/v/MA3d9vaL79h64V/Mushoku_Tensei_-_01.mp4", "https://embedsb.com/riyzuo0ulh6t.html", "https://mega.nz/file/cdoASLwD#x7DAkJr5PiM2S528uKAmKnUXQ-cRF-gI7O_80K5TBlk"] },
+    {number: 2, name: "Episodio 2", url: ["https://streamtape.com/v/VYjyqZYRVXIP9P/Mushoku_Tensei_-_02.mp4", "https://embedsb.com/zmdpkj4kw3wb.html", "https://mega.nz/file/NU4W3BRY#TzhvKLPfAB_LGqvofTat4kuKbuCX031jsDr8PujNOho"] },
+  ]},
+  {id: 11, name: "One Piece", imgName: 'miniaturas/One_Piece.jpg', episodios: [
+    { number: 1, name: "Episodio 1", url: ["https://streamtape.com/v/mqMKqGpPk3tb3wJ/One_Piece_-_001.mp4", "https://embedsb.com/vr8wi0unmypg.html", "https://mega.nz/file/hZpkxRpS#gx6p57LWB6zrGn-EWFudKqlmGFVRQP2f9PLzYXk_TKM"]},
+    {number: 2, name: "Episodio 2", url: ["https://streamtape.com/v/1DkAjrgWpRtewJ2/One_Piece_-_002.mp4", "https://embedsb.com/3ybvbrg29kwk.html", "https://mega.nz/file/hF5GTDjI#yDtbgsQcajpbUQ0SVxdIBBYvx_sshxnoS8WdPIly8xE"]},
+  ]},
+  {id: 12, name: "Magi The Labyrinth of Magic", imgName: 'miniaturas/magi.jpg', episodios: [
+    {number: 1, name: "Episodio 1", url: ["https://streamtape.com/v/DMQGezDpKmCD4V/Magi_-_The_Labyrinth_of_Magic_-_01.mp4", "https://embedsb.com/am9ugkzc2e78.html", "https://mega.nz/file/kJRQRLiZ#s68VEo7v5uKGrtBOSw6AOG10-t7k_QvqOLjSxqmIQvU"]},
+    {number: 2, name: "Episodio 2", url: ["https://streamtape.com/v/ellJbwxa7lhY0y1/Magi_-_The_Labyrinth_of_Magic_-_02.mp4", "https://embedsb.com/o4nrpeywlz87.html", "https://mega.nz/file/xNQGVDIL#V3yvDLsBQacuwqLxVI8gnLCbSbBrocAXW8mqfHLhtx0"]},
+  ]},
+  {id: 13, name:"Mushoku Tensei", imgName: 'miniaturas/mushoku.jpg', episodios: [
+    {number: 1, name: "Episodio 1", url: ["https://streamtape.com/v/MA3d9vaL79h64V/Mushoku_Tensei_-_01.mp4", "https://embedsb.com/riyzuo0ulh6t.html", "https://mega.nz/file/cdoASLwD#x7DAkJr5PiM2S528uKAmKnUXQ-cRF-gI7O_80K5TBlk"] },
+    {number: 2, name: "Episodio 2", url: ["https://streamtape.com/v/VYjyqZYRVXIP9P/Mushoku_Tensei_-_02.mp4", "https://embedsb.com/zmdpkj4kw3wb.html", "https://mega.nz/file/NU4W3BRY#TzhvKLPfAB_LGqvofTat4kuKbuCX031jsDr8PujNOho"] },
+  ]},
+  {id: 14, name: "One Piece", imgName: 'miniaturas/One_Piece.jpg', episodios: [
+    { number: 1, name: "Episodio 1", url: ["https://streamtape.com/v/mqMKqGpPk3tb3wJ/One_Piece_-_001.mp4", "https://embedsb.com/vr8wi0unmypg.html", "https://mega.nz/file/hZpkxRpS#gx6p57LWB6zrGn-EWFudKqlmGFVRQP2f9PLzYXk_TKM"]},
+    {number: 2, name: "Episodio 2", url: ["https://streamtape.com/v/1DkAjrgWpRtewJ2/One_Piece_-_002.mp4", "https://embedsb.com/3ybvbrg29kwk.html", "https://mega.nz/file/hF5GTDjI#yDtbgsQcajpbUQ0SVxdIBBYvx_sshxnoS8WdPIly8xE"]},
+  ]},
+  {id: 15, name: "Magi The Labyrinth of Magic", imgName: 'miniaturas/magi.jpg', episodios: [
+    {number: 1, name: "Episodio 1", url: ["https://streamtape.com/v/DMQGezDpKmCD4V/Magi_-_The_Labyrinth_of_Magic_-_01.mp4", "https://embedsb.com/am9ugkzc2e78.html", "https://mega.nz/file/kJRQRLiZ#s68VEo7v5uKGrtBOSw6AOG10-t7k_QvqOLjSxqmIQvU"]},
+    {number: 2, name: "Episodio 2", url: ["https://streamtape.com/v/ellJbwxa7lhY0y1/Magi_-_The_Labyrinth_of_Magic_-_02.mp4", "https://embedsb.com/o4nrpeywlz87.html", "https://mega.nz/file/xNQGVDIL#V3yvDLsBQacuwqLxVI8gnLCbSbBrocAXW8mqfHLhtx0"]},
+  ]},
 ];
 
 
