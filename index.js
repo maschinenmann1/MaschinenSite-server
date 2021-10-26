@@ -2,9 +2,11 @@ const express = require('express')
 const bodyParser = require('body-parser');
 var cors = require('cors');
 const configMensaje = require('./configMensaje');
+const helmet = require('helmet');
 const app = express()
 
-const frameguard = require('frameguard');
+
+
 
 
 var corsOptions = {
@@ -16,8 +18,8 @@ app.use(cors(corsOptions));
 app.use(bodyParser.urlencoded({limit: '50mb'}));
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser());
+app.use(helmet.frameguard({ action: 'SAMEORIGIN' }));
 
-app.use(frameguard({ action: 'SAMEORIGIN' }));
 
 app.get('/', (req, res) => res.send('Hello World!'));
 
